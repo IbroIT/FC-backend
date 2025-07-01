@@ -7,6 +7,7 @@ class Coach(models.Model):
         ('assistant', 'Ассистент'),
         ('gk', 'Тренер вратарей'),
         ('fitness', 'Тренер по физподготовке'),
+        ('analyst', 'Аналитик'),
     ]
     
     first_name = models.CharField(max_length=100)
@@ -18,7 +19,7 @@ class Coach(models.Model):
     bio = models.TextField(blank=True)
     photo = models.ImageField(upload_to='coaches/', blank=True)
     join_date = models.DateField(default=timezone.now)
-    achievements = models.JSONField(default=list, blank=True)
+    achievements = models.TextField(blank=True, default='', help_text="Перечислите достижения через запятую")
     is_active = models.BooleanField(default=True)
     order = models.PositiveIntegerField(default=0)  # Для сортировки
 

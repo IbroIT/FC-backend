@@ -59,10 +59,10 @@ INSTALLED_APPS = [
     'rest_framework',
     'players',
     'coaches',
-    'academy',
     'corsheaders',
     'django_filters',
     'news',
+    'academy.apps.AcademyConfig',
 ]
 
 MEDIA_URL = '/media/'
