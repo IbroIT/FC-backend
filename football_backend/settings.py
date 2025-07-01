@@ -58,6 +58,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'players',
+    'coaches',
+    'academy',
     'corsheaders',
     'django_filters',
     'news',
