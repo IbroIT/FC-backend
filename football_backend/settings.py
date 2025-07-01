@@ -60,7 +60,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # URL твоего Vite-проекта
+    "http://localhost:5174",  # URL твоего Vite-проекта
 ]
 
 ROOT_URLCONF = 'football_backend.urls'
