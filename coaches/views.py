@@ -1,10 +1,10 @@
-from django.shortcuts import render
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 from .models import Coach
+from .serializers import CoachSerializer
 
-def coaches_list(request):
+@api_view(['GET'])
+def coaches_api(request):
     coaches = Coach.objects.filter(is_active=True).order_by('order', 'position')
-    return render(request, 'coaches/list.html', {'coaches': coaches})
-
-def coach_detail(request, pk):
-    coach = Coach.objects.get(pk=pk)
-    return render(request, 'coaches/detail.html', {'coach': coach})
+    serializer = CoachSerializer(coaches, many=True, context={'request': request})
+    return Response(serializer.data)
