@@ -88,7 +88,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5174",  # URL твоего Vite-проекта
+    "https://fc-dordoi.vercel.app",  # URL твоего Vite-проекта
 ]
 
 ROOT_URLCONF = 'football_backend.urls'
