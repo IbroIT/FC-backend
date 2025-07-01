@@ -14,6 +14,11 @@ import os
 from pathlib import Path
 import dj_database_url
 
+CORS_ALLOWED_ORIGINS = [
+    "https://fc-dordoi.vercel.app/",
+    "http://localhost:5173",  # если локально тестируешь
+]
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 DATABASE_URL = os.getenv('DATABASE_URL', '')
